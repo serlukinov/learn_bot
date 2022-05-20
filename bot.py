@@ -10,7 +10,7 @@ def greet_user(update, context):
      print("вызван /start")
      update.message.reply_text("Привет, Привет)))")
 
-def tolk_to_me(update, context):
+def talk_to_me(update, context):
     text = update.message.text
     print(text)
     update.message.reply_text(text)
@@ -21,7 +21,7 @@ def main():
 
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
-    dp.add_handler(MessageHandler(Filters.text, tolk_to_me))
+    dp.add_handler(MessageHandler(Filters.text, talk_to_me))
 
     logging.info("Бот стартовал")
     mybot.start_polling()
