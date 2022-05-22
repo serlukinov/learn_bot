@@ -7,8 +7,8 @@ logging.basicConfig(filename="bot.log", level=logging.INFO)
 
 
 def greet_user(update, context):
-     print("вызван /start")
-     update.message.reply_text("Привет, Привет)))")
+    print("вызван /start")
+    update.message.reply_text("Привет, Привет)))")
 
 def talk_to_me(update, context):
     text = update.message.text
